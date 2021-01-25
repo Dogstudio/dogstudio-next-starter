@@ -45,3 +45,7 @@ npm run start
 # ESLint extends the `prettier` and `react-app` configurations.
 npm run lint
 ```
+
+## License
+
+This repository is [MIT licensed](/LICENSE.md)
