@@ -1,6 +1,10 @@
 // WDYR
 import 'wdyr';
 
+// Browser / Server Imports
+import 'on-server';
+import 'on-browser';
+
 // Next.js
 import Head from 'next/head';
 

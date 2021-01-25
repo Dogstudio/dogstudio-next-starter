@@ -8,14 +8,14 @@
 //   }
 
 @mixin object-fit($fit: fill, $position: null) {
-  .object-fit & {
+  :global(.object-fit) & {
     object-fit: $fit;
     @if $position {
       object-position: $position;
     }
   }
 
-  .no-object-fit & {
+  :global(.no-object-fit) & {
     @if $position {
       font-family: 'object-fit: #{$fit}; object-position: #{$position}';
       object-position: $position;

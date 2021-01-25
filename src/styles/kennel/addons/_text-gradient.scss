@@ -11,13 +11,13 @@
 @mixin text-gradient($direction, $color, $colors...) {
   display: inline-block;
 
-  .no-backgroundcliptext & {
+  :global(.no-backgroundcliptext) & {
     color: $color;
   }
 
-  .backgroundcliptext & {
+  :global(.backgroundcliptext) & {
     background: linear-gradient($direction, $colors);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
   }
 }

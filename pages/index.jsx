@@ -15,6 +15,8 @@ const Home = () => {
       </Head>
 
       <Text>Hello World!</Text>
+
+      <img src='//via.placeholder.com/1920x1080' alt='' />
     </div>
   );
 };

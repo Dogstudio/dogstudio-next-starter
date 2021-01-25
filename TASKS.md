@@ -9,7 +9,7 @@
 - [x] CSS Modules Support
 - [x] Static File Serving
 - [x] Basic Page Architecture
-- [ ] Basic JS utils Support
+- [x] Basic JS utils Support
 - [ ] Basic CI / CD Configuration
 - [x] Web Worker Support
 - [x] Shaders Support
