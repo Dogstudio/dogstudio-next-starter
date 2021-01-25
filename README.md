@@ -38,7 +38,8 @@ We recommend the following documentations to master the starter:
 
 ## Kennel
 
-We included our homemade SCSS toolkit within this starter. We named it [**Kennel**](/src/styles/kennel). It has been a useful friend at Dogstudio for the past few years. Please make sure to have a look at its mixins, functions, helpers,...
+We included our homemade SCSS toolkit within this starter. We named it [**Kennel**](/src/styles/kennel).  
+Please make sure to have a look at its mixins, functions, helpers,...
 
 ## References
 
