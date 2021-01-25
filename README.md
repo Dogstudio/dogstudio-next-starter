@@ -14,6 +14,7 @@ The Next.js starter with all the features you'll need to build blazing-fast webs
 - Shaders
 - SCSS/SASS
 - Web Workers
+- [**Custom SCSS toolkit**](/src/styles/kennel)
 
 ## Getting Started
 
@@ -35,11 +36,6 @@ We recommend the following documentations to master the starter:
 - [Next.js](https://nextjs.org/docs/getting-started)
 - [Prettier](https://prettier.io/docs/en/editors.html)
 - [Localization](https://lazertechnologies.com/blog/how-to-add-localization-to-your-nextjs-app)
-
-## Kennel
-
-We included our homemade SCSS toolkit within this starter. We named it [**Kennel**](/src/styles/kennel).  
-Please make sure to have a look at its mixins, functions, helpers,...
 
 ## References
 
