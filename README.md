@@ -2,7 +2,7 @@
 
 ![Dependencies](https://david-dm.org/Dogstudio/dogstudio-next-starter/status.svg)
 ![devDependencies](https://david-dm.org/Dogstudio/dogstudio-next-starter/dev-status.svg)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](/LICENSE.md)
 
 The Next.js starter with all the features you'll need to build blazing-fast websites and applications.
 
