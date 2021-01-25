@@ -1,0 +1,32 @@
+@charset 'UTF-8';
+
+/// Maintain an elements aspect ratio, even as it scales.
+///
+/// @example scss - Usage
+///   .element {
+///     @include aspect-ratio(16, 9);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     position: relative;
+///     
+///     &:before {
+///       padding-top: 56.25%;
+///       display: block;
+///       content: '';
+///     }
+///   }
+
+@mixin aspect-ratio($width, $height) {
+  $width: strip-units($width);
+  $height: strip-units($height);
+  $ratio: $height / $width * 100%;
+  position: relative;
+
+  &:before {
+    @include padding($ratio null null);
+    display: block;
+    content: '';
+  }
+}

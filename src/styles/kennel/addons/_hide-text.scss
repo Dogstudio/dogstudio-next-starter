@@ -1,0 +1,42 @@
+@charset 'UTF-8';
+
+/// Hide only visually, but have it available for screen readers:
+///
+/// @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+///
+/// @example scss - Usage
+///   .element {
+///     @include hide-text;
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     border: 0;
+///     clip: rect(0 0 0 0);
+///     height: 1px;
+///     margin: -1px;
+///     overflow: hidden;
+///     padding: 0;
+///     position: absolute;
+///     width: 1px;
+///   }
+
+@mixin hide-text {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@mixin reset-hide-text {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}

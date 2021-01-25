@@ -1,0 +1,37 @@
+// Kennel Settings
+// -----------------------------------------------------------------------------
+$base-url: '~assets/';
+$base-font-size: 16px;
+$base-line-height: 2;
+
+// Random Variables
+// -----------------------------------------------------------------------------
+$PI: 3.1415926536;
+
+// Overrides Default Color Palette
+// -----------------------------------------------------------------------------
+$brand-black: #000;
+$brand-white: #fff;
+
+$default-colors: (
+  social-twitter: #04aceb,
+  social-facebook: #3b5998,
+  social-linkedin: #0085af,
+  social-youtube: #cd201f,
+  social-instagram: #e12f67,
+
+  alert-valid: #61a450,
+  alert-warning: orange,
+  alert-error: #f6482e,
+);
+
+// Font Stack
+// -----------------------------------------------------------------------------
+$font-serif: 'Times', serif;
+$font-sans-serif: 'Helvetica', sans-serif;
+
+// Responsive Settings
+// -----------------------------------------------------------------------------
+$mq-responsive: true;
+$mq-static-breakpoint: l;
+$mq-show-breakpoints: (xxs, xs, s, m, l, xl, xxl);

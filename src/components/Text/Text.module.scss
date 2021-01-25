@@ -1,0 +1,27 @@
+// Kennel
+@import 'styles/kennel/kennel';
+
+// Vendors (See package.json)
+@import 'sass-mq/mq';
+
+// Utils
+@import 'styles/utils/variables';
+@import 'styles/utils/breakpoints';
+
+.text-white {
+  color: $brand-white;
+
+  @include mq($until: 'l') {
+    color: $brand-black;
+  }
+}
+
+.text-black {
+  color: $brand-black;
+
+  @include mq($until: 'l') {
+    color: $brand-white;
+  }
+}
+
+@include import-fonts();

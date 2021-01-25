@@ -1,0 +1,23 @@
+@charset 'UTF-8';
+
+// Apply a gradient to text
+// https://css-tricks.com/snippets/css/gradient-text/
+//
+// @example scss - Usage
+//   .element {
+//     @include text-gradient(to right, red, red 0%, transparent 100%);
+//   }
+
+@mixin text-gradient($direction, $color, $colors...) {
+  display: inline-block;
+
+  .no-backgroundcliptext & {
+    color: $color;
+  }
+
+  .backgroundcliptext & {
+    background: linear-gradient($direction, $colors);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+}

@@ -1,0 +1,31 @@
+@charset 'UTF-8';
+
+/// Convert pixels to rems
+/// Assumes $base-font-size is the font-size of <html>
+///
+/// @access private
+///
+/// @param {Number} $pxval
+///   The value to convert.
+///
+/// @example scss - Usage
+///   $dimension: rem(12); // $base-font-size: 16px
+///
+/// @example css - CSS Output
+///   $dimension: 0.75rem; // $base-font-size: 16px
+///
+/// @requires {Variable} $base-font-size
+///
+/// @return {Number}
+
+@function rem($pxval) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+
+  $base: $base-font-size;
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+  @return ($pxval / $base) * 1rem;
+}

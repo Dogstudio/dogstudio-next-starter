@@ -1,0 +1,14 @@
+@charset 'UTF-8';
+
+/// Get a color from a given color palette.
+///
+/// @param {String} $name                      - color to get
+/// @param {Map}    $palette ($default-colors) - palette
+///
+/// @requires {variable} default-colors
+///
+/// @return {Color | Null}
+
+@function color($name, $palette: $default-colors) {
+  @return map-get($palette, $name);
+}

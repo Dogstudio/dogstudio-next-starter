@@ -1,0 +1,26 @@
+@charset 'UTF-8';
+
+// Apply object-fit to element depending on classname set on HTML by Modernizr
+//
+// @example scss - Usage
+//   .element {
+//     @include object-fit(cover);
+//   }
+
+@mixin object-fit($fit: fill, $position: null) {
+  .object-fit & {
+    object-fit: $fit;
+    @if $position {
+      object-position: $position;
+    }
+  }
+
+  .no-object-fit & {
+    @if $position {
+      font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+      object-position: $position;
+    } @else {
+      font-family: 'object-fit: #{$fit}';
+    }
+  }
+}

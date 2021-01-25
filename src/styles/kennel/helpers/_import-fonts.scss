@@ -1,0 +1,58 @@
+@charset 'UTF-8';
+
+/// Add the font-face rules for all used fonts
+/// @return {String} font-face rules
+/// 
+/// @requires {function} font-properties
+/// @requires {function} font-face
+@mixin import-fonts($font-stack: $base-font-stack) {
+  @each $name, $variations in $used-fonts {
+    @each $id in $variations {
+
+      $font-properties: map-deep-get($font-stack, $name, $id);
+      @if $font-properties {
+
+        // If we have a file we crate the font-face rule
+        $file: map-get($font-properties, file);
+        @if $file {
+          $family: map-get($file, family);
+          $path: map-get($file, path);
+          $formats: map-get($file, formats);
+          $weight: map-get($font-properties, weight);
+          $style: map-get($font-properties, style);
+          
+          @if $formats {
+            @include font-face($family, $path, $weight, $style, $formats);
+          } @else {
+            @include font-face($family, $path, $weight, $style);
+          }
+        }
+      }
+    }
+  }
+}
+
+/// Track all fonts and variations used in the stylesheet
+/// Check if this combination already exists in the map.
+/// If not, we add it to the map.
+/// 
+/// @param {String} $name
+/// @param {String} $id
+/// 
+/// @requires {Map} used-fonts
+@mixin track-fonts($name, $id) {
+  // First check if we already knew this one:
+  @if map-has-key($used-fonts, $name) == false {
+    // Font-family isn't in the map yet, so add it.
+    // The key for the nested map is the font name:
+    $used-fonts: map-merge($used-fonts, ($name: ())) !global;
+  }
+  
+  // Now check if the variation is known
+  $font-map: map-get($used-fonts, $name);
+  @if index($font-map, $id) == null {
+    // Variation isn't in the map yet, so add it:
+    $variations: append($font-map, $id);
+    $used-fonts: map-merge($used-fonts, ($name: $variations)) !global;
+  }
+}

@@ -1,0 +1,25 @@
+@charset 'UTF-8';
+
+/// Font styling shorthand
+/// 
+/// @param {String} $name
+/// @param {String} $id
+/// @param {Map} $properties
+/// @param {Map} $font-stack (optional)
+///
+/// @example
+///  @include font(helvetica, regular);
+///
+/// @requires {function} font-properties
+@mixin font($name, $id: regular, $properties: family weight style, $font-stack: $base-font-stack){
+  $font-properties: map-deep-get($font-stack, $name, $id);
+  
+  @if $font-properties {
+    @include track-fonts($name, $id);
+    @each $key, $values in $font-properties {
+      @if contains($properties, $key) {
+        font-#{$key}: map-get($font-properties, $key);
+      }
+    }
+  }
+}

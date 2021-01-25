@@ -1,0 +1,18 @@
+/// Fetch nested keys
+/// 
+/// @param {Map} $map - Map
+/// @param {Arglist} $keys - Keys to fetch
+/// 
+/// @return {*}
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    @if type-of($map) != "map" {
+      @warn '`#{$map}` is not a map.';
+      @return false;
+    }
+
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}

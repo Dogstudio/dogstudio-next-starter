@@ -1,0 +1,33 @@
+@charset 'UTF-8';
+
+/// Make type rendering look crisper
+///
+/// @example scss - Usage
+///   .element {
+///     @include font-smoothing;
+///   }
+///
+///   .element-off {
+///     @include font-smoothing(false);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     -moz-osx-font-smoothing: grayscale;
+///     -webkit-font-smoothing: antialiased;
+///   }
+///
+///   .element-off {
+///     -moz-osx-font-smoothing: auto;
+///     -webkit-font-smoothing: subpixel-antialiased;
+///   }
+
+@mixin font-smoothing($on: true) {
+  @if $on {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  } @else {
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+}

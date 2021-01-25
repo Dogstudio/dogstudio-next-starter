@@ -1,0 +1,15 @@
+@charset 'UTF-8';
+
+$base-font-size: 16px !default;
+$base-line-height: 1.5 !default;
+
+$base-font-stack: (
+  helvetica: (
+    regular: (family: (Helvetica Neue, Helvetica, Arial, sans-serif), weight: 400, style: normal, cap-height: 0.68),
+    regular-italic: (family: (Helvetica Neue, Helvetica, Arial, sans-serif), weight: 400, style: italic, cap-height: 0.68),
+    bold: (family: (Helvetica Neue, Helvetica, Arial, sans-serif), weight: 700, style: normal, cap-height: 0.68),
+    bold-italic: (family: (Helvetica Neue, Helvetica, Arial, sans-serif), weight: 700, style: italic, cap-height: 0.68)
+  )
+);
+
+$used-fonts: ();

@@ -1,0 +1,24 @@
+# Dependencies
+/node_modules
+
+# Misc
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local `env` Files
+.env
+.env.test
+.env.production
+.env.development
+
+.env.local
+.env.test.local
+.env.production.local
+.env.development.local
+
+# Bark
+bark.yml

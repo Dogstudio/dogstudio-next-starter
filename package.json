@@ -1,0 +1,59 @@
+{
+  "name": "@dogstudio/next",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Next.js kit made by Dogstudio",
+  "engines": {
+    "node": "10.x"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "lint": "eslint --ext .jsx,.js src/ pages/",
+    "build": "next build",
+    "start": "next start"
+  },
+  "browserslist": [
+    "last 2 version",
+    "not ie > 0",
+    "not bb > 0",
+    "not kaios > 0",
+    "not baidu > 0",
+    "not ie_mob > 0",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "@welldone-software/why-did-you-render": "^6.0.5",
+    "classnames": "^2.2.6",
+    "immer": "^8.0.0",
+    "next": "^10.0.5",
+    "next-images": "^1.7.0",
+    "object-fit-images": "^3.2.4",
+    "object-fit-videos": "^1.0.4",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-i18next": "^11.8.5",
+    "react-use": "^15.3.8",
+    "sass-mq": "^5.0.1",
+    "use-immer": "^0.4.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.3",
+    "babel-eslint": "^10.1.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "glslify-import": "^3.1.0",
+    "glslify-loader": "^2.0.0",
+    "prettier": "^2.2.1",
+    "raw-loader": "^4.0.2",
+    "sass": "^1.32.4",
+    "worker-plugin": "^5.0.0"
+  }
+}

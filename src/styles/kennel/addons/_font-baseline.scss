@@ -1,0 +1,20 @@
+@charset 'UTF-8';
+
+@mixin baseline($name, $id, $font-size, $line-height: $base-line-height, $below: $base-line-height, $font-stack: $base-font-stack, $base: $base-font-size) {
+  $font-size: strip-units($font-size);
+  $root-size: strip-units($base);
+  $font-properties: map-deep-get($font-stack, $name, $id);
+  $cap-height: if($font-properties, map-get($font-properties, cap-height), 0.68);
+
+  font-size: #{$font-size / $root-size}rem;
+  line-height: #{$line-height}rem;
+
+  $baseline-shift: #{($font-size / 2 * (($line-height * $root-size / $font-size) - $cap-height)) / $root-size + 0.00001};
+  $baseline-push: #{$below - (($font-size / 2 * (($line-height * $root-size / $font-size) - $cap-height)) / $root-size + 0.00001)};
+  margin-bottom: #{$baseline-push}rem;
+  padding-top: #{$baseline-shift}rem;
+
+  &:first-child {
+    padding-top: 0;
+  }
+}

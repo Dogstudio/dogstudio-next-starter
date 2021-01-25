@@ -1,0 +1,25 @@
+@charset 'UTF-8';
+
+/// Convert photoshop letter tracking to css letter-spacing
+///
+/// @access private
+///
+/// @param {Number} $value
+///   The value to convert.
+///
+/// @example scss - Usage
+///   letter-spacing: ls(100);
+///   letter-spacing: ls(-40);
+///
+/// @example css - CSS Output
+///   letter-spacing: 0.1em;
+///   letter-spacing: -0.04em;
+///
+/// @return {Number}
+
+@function ls($value) {
+  @if not unitless($value) {
+    $value: strip-units($value);
+  }
+  @return ($value / 1000) * 1em;
+}

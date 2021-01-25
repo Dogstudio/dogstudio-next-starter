@@ -1,0 +1,12 @@
+/**
+  Usage:
+
+  @font-face {
+    font-family: "FontName";
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;
+    src: url("/assets/fonts/FontName.woff") format("woff"),
+        url("/assets/fonts/FontName.woff2") format("woff2");
+  }
+ */

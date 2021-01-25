@@ -1,0 +1,10 @@
+# Testing
+/coverage
+
+# Next.js
+/.next
+/out
+
+# Build
+/dist
+/build

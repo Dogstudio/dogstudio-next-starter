@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+
+/// You don't have to keep track of the names of your @keyframes anymore.
+///
+/// @example scss - Usage
+///   .element {
+///     animation: 10s linear infinite;
+///
+///     @include animation-keyframes {
+///       from {
+///         background-position: 0% 0%;
+///       }
+///       to {
+///         background-position: 42% 0%;
+///       }
+///     }
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     animation: 10s linear infinite;
+///     animation-name: uevk2bess;
+///   }
+///
+///   @keyframes uevk2bess {
+///     from {
+///       background-position: 0% 0%;
+///     }
+///     to {
+///       background-position: 42% 0%;
+///     }
+///   }
+
+@mixin animation-keyframes {
+  $animation-name: unique-id();
+  animation-name: $animation-name;
+
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}

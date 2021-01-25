@@ -1,0 +1,35 @@
+@charset 'UTF-8';
+
+/// Convert pixels to ems
+/// for a relational value of 12px write em(12) when the parent is 16px
+/// if the parent is another value say 24px write em(12, 24)
+///
+/// @access private
+///
+/// @param {Number} $pxval
+///   The value to convert.
+///
+/// @param {Number} $base
+///   The parent value.
+///
+/// @example scss - Usage
+///   $dimension: em(12);
+///   $dimension: em(12, 24);
+///
+/// @example css - CSS Output
+///   $dimension: 0.75em;
+///   $dimension: 0.5em;
+///
+/// @requires {Variable} $base-font-size
+///
+/// @return {Number}
+
+@function em($pxval, $base: $base-font-size) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+  @return ($pxval / $base) * 1em;
+}
