@@ -12,3 +12,17 @@ The Next.js starter with all the features you'll need to build blazing-fast webs
 - Shaders
 - SCSS/SASS
 - Web Workers
+
+## Getting Started
+
+Quick Start:
+
+```bash
+git clone git@github.com:Dogstudio/dogstudio-next-starter.git my-new-app
+```
+
+```bash
+cd my-new-app
+npm i
+npm run dev
+```
