@@ -1,4 +1,5 @@
-// WDYR
+// Why Did You Render
+// See: https://github.com/welldone-software/why-did-you-render#installation
 import 'wdyr';
 
 // Browser / Server Imports
