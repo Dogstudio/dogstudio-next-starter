@@ -25,7 +25,7 @@ npm i
 npm run dev
 ```
 
-## Scripts
+## References
 
 ```bash
 # Run Next.js in development-mode with a local server.
