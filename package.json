@@ -1,17 +1,30 @@
 {
-  "name": "@dogstudio/next",
+  "name": "dogstudio-next-starter",
   "version": "0.1.0",
-  "license": "MIT",
-  "description": "Next.js kit made by Dogstudio",
-  "engines": {
-    "node": "10.x"
-  },
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "lint": "eslint --ext .jsx,.js src/ pages/",
     "build": "next build",
     "start": "next start"
   },
+  "contributors": [
+    {
+      "name": "Anthony Du Pont",
+      "email": "bulldog@dogstudio.co",
+      "url": "https://twitter.com/Anthodpnt"
+    },
+    {
+      "name": "Thao Delefortrie",
+      "email": "malamute@dogstudio.co",
+      "url": "https://twitter.com/ThaoD5"
+    },
+    {
+      "name": "Dorian Lods",
+      "email": "pomsky@dogstudio.co",
+      "url": "https://twitter.com/LodsDorian"
+    }
+  ],
   "browserslist": [
     "last 2 version",
     "not ie > 0",
