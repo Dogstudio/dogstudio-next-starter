@@ -7,6 +7,6 @@ The Next.js starter with all the features you'll need to build blazing-fast webs
 - Prettier
 - ESLint
 - i18next
+- Shaders
 - SCSS/SASS
 - Web Workers
-- Shaders  
