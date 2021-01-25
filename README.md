@@ -48,4 +48,4 @@ npm run lint
 
 ## License
 
-This repository is [MIT licensed](/LICENSE.md)
+The `dogstudio-next-starter` repository is [MIT licensed](/LICENSE.md)
