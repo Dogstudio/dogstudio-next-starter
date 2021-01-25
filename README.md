@@ -36,6 +36,10 @@ We recommend the following documentations to master the starter:
 - [Prettier](https://prettier.io/docs/en/editors.html)
 - [Localization](https://lazertechnologies.com/blog/how-to-add-localization-to-your-nextjs-app)
 
+## Kennel
+
+We included our homemade SCSS toolkit within this starter. We named it [**Kennel**](/src/styles/kennel). It has been a useful friend at Dogstudio for the past few years. Please make sure to have a look at its mixins, functions, helpers,...
+
 ## References
 
 ```bash

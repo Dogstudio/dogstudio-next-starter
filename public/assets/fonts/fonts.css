@@ -7,6 +7,6 @@
     font-style: normal;
     font-display: fallback;
     src: url("/assets/fonts/FontName.woff") format("woff"),
-        url("/assets/fonts/FontName.woff2") format("woff2");
+         url("/assets/fonts/FontName.woff2") format("woff2");
   }
  */
