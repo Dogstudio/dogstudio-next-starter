@@ -62,4 +62,4 @@ Please submit issues, pull requests or [contact us](devops@dogstudio.be). We are
 
 ## License
 
-The `dogstudio-next-starter` repository is [MIT licensed](/LICENSE.md)
+The `dogstudio-next-starter` repository is [MIT licensed](/LICENSE.md).
