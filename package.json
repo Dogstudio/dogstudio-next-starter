@@ -28,7 +28,7 @@
     "i18next": "^19.8.4",
     "i18next-browser-languagedetector": "^6.0.1",
     "i18next-http-backend": "^1.0.22",
-    "immer": "^8.0.0",
+    "immer": "^8.0.1",
     "next": "^10.0.5",
     "next-i18next": "^7.0.1",
     "next-images": "^1.7.0",
@@ -58,7 +58,7 @@
     "glslify-loader": "^2.0.0",
     "prettier": "^2.2.1",
     "raw-loader": "^4.0.2",
-    "sass": "^1.32.4",
+    "sass": "^1.32.5",
     "worker-plugin": "^5.0.0"
   }
 }
