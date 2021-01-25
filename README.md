@@ -1,4 +1,4 @@
-## Dogstudio - Next
+## Dogstudio Next Starter
 
 The Next.js starter with all the features you'll need to build blazing-fast websites and applications.
 
