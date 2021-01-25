@@ -9,9 +9,9 @@ const withImages = require('next-images');
 module.exports = withImages({
   // Locales Options
   i18n: {
-    locales: ['en-US'],
+    locales: ['en', 'fr'],
     localeDetection: true,
-    defaultLocale: 'en-US'
+    defaultLocale: 'en'
   },
 
   // Images Options

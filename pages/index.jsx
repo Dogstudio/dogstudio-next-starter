@@ -1,6 +1,9 @@
 import Head from 'next/head';
 import React from 'react';
 
+// i18n
+import { useTranslation } from 'i18n';
+
 // React Components
 import Text from 'components/Text';
 
@@ -8,15 +11,17 @@ import Text from 'components/Text';
 import Styles from './index.module.scss';
 
 const Home = () => {
+  /** i18n */
+  const { t } = useTranslation();
+
+  /** DOM */
   return (
     <div className={Styles['page']}>
       <Head>
         <title>Next | Dogstudio</title>
       </Head>
 
-      <Text>Hello World!</Text>
-
-      <img src='//via.placeholder.com/1920x1080' alt='' />
+      <Text>{t('Hello World!')}</Text>
     </div>
   );
 };
