@@ -27,6 +27,15 @@ npm i
 npm run dev
 ```
 
+## Documentation
+
+We recommend the following documentations to master the starter:
+
+- [React](https://reactjs.org/docs/getting-started.html)
+- [Next.js](https://nextjs.org/docs/getting-started)
+- [Prettier](https://prettier.io/docs/en/editors.html)
+- [Localization](https://lazertechnologies.com/blog/how-to-add-localization-to-your-nextjs-app)
+
 ## References
 
 ```bash
