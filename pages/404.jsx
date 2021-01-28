@@ -7,6 +7,7 @@ import Text from 'components/Text';
 // Styles
 import Styles from './404.module.scss';
 
+// Custom 404 Error
 const Custom404 = () => {
   return (
     <div className={Styles['page']}>

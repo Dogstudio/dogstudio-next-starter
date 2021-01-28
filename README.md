@@ -14,6 +14,7 @@ The Next.js starter with all the features you'll need to build blazing-fast webs
 - Shaders
 - SCSS/SASS
 - Web Workers
+- CSS Modules
 - [**Custom SCSS toolkit**](/src/styles/kennel)
 
 ## Getting Started
@@ -35,6 +36,7 @@ We recommend the following documentations to master the starter:
 - [React](https://reactjs.org/docs/getting-started.html)
 - [Next.js](https://nextjs.org/docs/getting-started)
 - [Prettier](https://prettier.io/docs/en/editors.html)
+- [CSS Modules](https://github.com/css-modules/css-modules)
 - [Localization](https://lazertechnologies.com/blog/how-to-add-localization-to-your-nextjs-app)
 
 ## References

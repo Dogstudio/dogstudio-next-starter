@@ -10,6 +10,7 @@ import Text from 'components/Text';
 // Styles
 import Styles from './index.module.scss';
 
+// Page Component
 const Home = () => {
   /** i18n */
   const { t } = useTranslation();

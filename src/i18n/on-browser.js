@@ -13,8 +13,8 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 // Constants
 const DEBUG = boolean(process.env.NEXT_PUBLIC_I18N_DEBUG);
-const DEFAULT = process.env.NEXT_PUBLIC_I18N_DEFAULT;
-const LANGUAGES = process.env.NEXT_PUBLIC_I18N_LANGUAGES.split('|');
+const DEFAULT = process.env.NEXT_PUBLIC_I18N_DEFAULT || 'en';
+const LANGUAGES = (process.env.NEXT_PUBLIC_I18N_LANGUAGES || 'en|fr').split('|');
 const SAVE_MISSING = boolean(process.env.NEXT_PUBLIC_I18N_SAVE_MISSING);
 
 // Browser Configuration
