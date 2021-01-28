@@ -13,8 +13,8 @@ The Next.js starter with all the features you'll need to build blazing-fast webs
 - i18next
 - Shaders
 - SCSS/SASS
-- Web Workers
 - CSS Modules
+- Web Workers
 - [**Custom SCSS toolkit**](/src/styles/kennel)
 
 ## Getting Started
