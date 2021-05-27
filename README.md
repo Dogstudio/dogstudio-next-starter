@@ -1,11 +1,15 @@
-## Dogstudio
+## Dogstudio Next Starter
 
-The stack brings all the features you'll need to build a blazing-fast experience.
+![Dependencies](https://david-dm.org/Dogstudio/dogstudio-next-starter/status.svg)
+![devDependencies](https://david-dm.org/Dogstudio/dogstudio-next-starter/dev-status.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](/LICENSE.md)
+
+The Next.js starter with all the features you'll need to build blazing-fast websites and applications.
 
 - Opinionated dependencies
-- Next.js 10.x.x
+- Next.js 10
 - ESLint
-- i18n
+- i18next
 - Shaders
 - SCSS/SASS
 - CSS Modules
@@ -19,11 +23,11 @@ The stack brings all the features you'll need to build a blazing-fast experience
 ## Getting Started
 
 ```bash
-git clone git@github.com:Dogstudio/dogstudio-next-starter.git dogstudio-next-starter
+git clone git@github.com:Dogstudio/dogstudio-next-starter.git my-new-app
 ```
 
 ```bash
-cd dogstudio-next-starter
+cd my-new-app
 cp .env.example .env.local
 ```
 
