@@ -1,1 +1,3 @@
-# Paths to files ESLint will ignore.
+src/libs/**/*.ts
+src/libs/**/*.js
+src/libs/**/*.jsx

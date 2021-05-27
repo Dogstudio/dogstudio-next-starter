@@ -10,5 +10,5 @@
     @warn "Argument for `asin()` must be a number between -1 and 1";
     @return null;
   }
-  @return atan($x / sqrt(1 - $x * $x));
+  @return atan(math.div($x, sqrt(1 - $x * $x)));
 }

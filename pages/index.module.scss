@@ -1,13 +1,6 @@
 // Kennel
 @import 'styles/kennel/kennel';
 
-// Vendors (See package.json)
-@import 'sass-mq/mq';
-
-// Utils
-@import 'styles/utils/variables';
-@import 'styles/utils/breakpoints';
-
 .page {
-  // Silence is golden
+  position: relative;
 }

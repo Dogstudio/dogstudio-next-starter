@@ -10,9 +10,10 @@ $PI: 3.1415926536;
 
 // Overrides Default Color Palette
 // -----------------------------------------------------------------------------
+// Main Colors
 $brand-black: #000;
-$brand-white: #fff;
 
+// Defaults
 $default-colors: (
   social-twitter: #04aceb,
   social-facebook: #3b5998,
@@ -25,13 +26,21 @@ $default-colors: (
   alert-error: #f6482e,
 );
 
-// Font Stack
+// Z Layers
 // -----------------------------------------------------------------------------
-$font-serif: 'Times', serif;
-$font-sans-serif: 'Helvetica', sans-serif;
+$z-layers: (
+  'popup': 1000,
+  'header': 900,
+);
 
 // Responsive Settings
 // -----------------------------------------------------------------------------
 $mq-responsive: true;
-$mq-static-breakpoint: l;
+$mq-static-breakpoint: xl;
 $mq-show-breakpoints: (xxs, xs, s, m, l, xl, xxl);
+
+// Grid
+// -----------------------------------------------------------------------------
+$grid-count: 16;
+$grid-col-width: 63px;
+$grid-gutter: 18px;

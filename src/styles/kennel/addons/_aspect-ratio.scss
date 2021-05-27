@@ -21,7 +21,7 @@
 @mixin aspect-ratio($width, $height) {
   $width: strip-units($width);
   $height: strip-units($height);
-  $ratio: $height / $width * 100%;
+  $ratio: math.div($height, $width) * 100%;
   position: relative;
 
   &:before {

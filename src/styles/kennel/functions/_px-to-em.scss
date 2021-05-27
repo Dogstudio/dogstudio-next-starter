@@ -31,5 +31,5 @@
   @if not unitless($base) {
     $base: strip-units($base);
   }
-  @return ($pxval / $base) * 1em;
+  @return math.div($pxval, $base) * 1em;
 }

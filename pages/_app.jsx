@@ -7,46 +7,38 @@ import 'on-server';
 import 'on-browser';
 
 // i18n
-import i18n from 'i18n';
+import { appWithTranslation } from 'next-i18next';
 
 // Next.js / React
 import Head from 'next/head';
-import { useImmer } from 'use-immer';
-import { useMount } from 'react-use';
+
+// React Components
+import Main from 'components/Main';
+import Grid from 'components/Grid';
+
+// React Contexts
+import { SampleProvider } from 'contexts/SampleContext';
 
 // Global Styles
 import 'styles/global';
 
 // Custom Application
-const CustomApp = ({ Component, pageProps }) => {
-  /** Local State */
-  const [state, mutate] = useImmer({ init: false });
+const CustomApp = ({ Component, pageProps }) => (
+  <Main>
+    <Head>
+      {/** See: https://github.com/vercel/next.js/blob/master/errors/no-document-viewport-meta.md */}
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover, user-scalable=no"
+      />
+    </Head>
 
-  /** Lifecycle */
-  useMount(() => {
-    i18n?.initPromise?.then(() => {
-      mutate((draft) => {
-        draft.init = true;
-      });
-    });
-  });
+    <SampleProvider>
+      <Component {...pageProps} />
+    </SampleProvider>
 
-  /** DOM */
-  return (
-    state.init && (
-      <main className='site-wrapper'>
-        <Head>
-          {/** See: https://github.com/vercel/next.js/blob/master/errors/no-document-viewport-meta.md */}
-          <meta
-            name='viewport'
-            content='width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover, user-scalable=no'
-          />
-        </Head>
+    <Grid />
+  </Main>
+);
 
-        <Component {...pageProps} />
-      </main>
-    )
-  );
-};
-
-export default CustomApp;
+export default appWithTranslation(CustomApp);

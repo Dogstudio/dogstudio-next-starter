@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @charset 'UTF-8';
 
 // Returns base to the exponent power.
@@ -23,7 +25,7 @@
       $exp: floor($exp * 0.5);
       $base: $base * $base;
     }
-    @return if($s != 0, 1 / $r, $r);
+    @return if($s != 0, math.div(1, $r), $r);
   } @else {
     @return exp(log($base) * $exp);
   }

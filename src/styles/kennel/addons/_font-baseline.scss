@@ -6,10 +6,10 @@
   $font-properties: map-deep-get($font-stack, $name, $id);
   $cap-height: if($font-properties, map-get($font-properties, cap-height), 0.68);
 
-  font-size: #{$font-size / $root-size}rem;
+  font-size: #{math.div($font-size, $root-size)}rem;
   line-height: #{$line-height}rem;
 
-  $baseline-shift: #{($font-size / 2 * (($line-height * $root-size / $font-size) - $cap-height)) / $root-size + 0.00001};
+  $baseline-shift: #{math.div($font-size / 2 * (($line-height * $root-size / $font-size) - $cap-height), $root-size) + 0.00001};
   $baseline-push: #{$below - (($font-size / 2 * (($line-height * $root-size / $font-size) - $cap-height)) / $root-size + 0.00001)};
   margin-bottom: #{$baseline-push}rem;
   padding-top: #{$baseline-shift}rem;

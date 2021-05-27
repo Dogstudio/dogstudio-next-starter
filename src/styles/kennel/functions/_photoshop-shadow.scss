@@ -45,7 +45,7 @@
 
   $y: convert-units(round(sin($angle) * $distance), px);
   $x: convert-units(round(cos($angle) * $distance), px);
-  $spread: convert-units($size * $spread / 100, px);
+  $spread: convert-units(math.div($size * $spread, 100), px);
   $blur: $size - $spread;
 
   @return $x $y $blur $spread $color if($inner, inset, null);

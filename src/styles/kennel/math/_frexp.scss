@@ -15,7 +15,7 @@
     }
   } @else if $x >= 1 {
     @while $x >= 1 {
-      $x: $x / 2;
+      $x: math.div($x, 2);
       $exp: $exp + 1;
     }
   }

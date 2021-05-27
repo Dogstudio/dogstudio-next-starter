@@ -6,5 +6,5 @@
 ///     csc(1.0472) // 1.1547
 ///     csc(60deg)  // 1.1547
 @function csc($x) {
-  @return 1 / sin($x);
+  @return math.div(1, sin($x));
 }

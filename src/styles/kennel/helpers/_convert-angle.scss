@@ -7,9 +7,9 @@
 @function convert-angle($angle, $unit) {
   $conversion-factors: (
     deg:  1deg,
-    grad: (10grad/9),
-    turn: (1turn/360),
-    rad:  (3.141592653589793rad/180)
+    grad: math.div(10grad, 9),
+    turn: math.div(1turn, 360),
+    rad:  math.div(3.141592653589793rad, 180)
   );
 
   @if not map-has-key($conversion-factors, unit($angle)) {
@@ -22,7 +22,6 @@
     @return false;
   }
 
-  @return $angle
-            / map-get($conversion-factors, unit($angle))
+  @return math.div($angle, map-get($conversion-factors, unit($angle)))
             * map-get($conversion-factors, $unit);
 }

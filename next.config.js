@@ -1,17 +1,21 @@
+// Dependencies
 const path = require('path');
-
-// Plugins
-const WorkerPlugin = require('worker-plugin');
 
 // Extensions
 const withImages = require('next-images');
 
-module.exports = withImages({
+// i18n
+const { i18n } = require('./next-i18next.config');
+
+// Configuration
+const config = {
   // Locales Options
-  i18n: {
-    locales: ['en', 'fr'],
-    localeDetection: true,
-    defaultLocale: 'en'
+  i18n,
+
+  // Webpack 5
+  // See: https://nextjs.org/docs/messages/webpack5
+  future: {
+    webpack5: true,
   },
 
   // Images Options
@@ -22,17 +26,17 @@ module.exports = withImages({
       600,
       768,
       1024,
-      1160,
-      1440
-    ]
+      1360,
+      1440,
+    ],
   },
 
   // SASS Options
   sassLoaderOptions: {
     includePaths: [
       path.join(__dirname),
-      path.join(__dirname, 'src')
-    ]
+      path.join(__dirname, 'src'),
+    ],
   },
 
   // Images Options
@@ -40,7 +44,7 @@ module.exports = withImages({
   inlineImageLimit: false,
 
   // Extend Webpack Configuration
-  webpack(config) {
+  webpack(_config, { webpack }) {
     // Variables
     const name = '[name].[hash].[ext]';
 
@@ -54,9 +58,9 @@ module.exports = withImages({
           options: {
             name,
             outputPath: 'static/media/',
-            publicPath: '/_next/static/media'
-          }
-        }
+            publicPath: '/_next/static/media',
+          },
+        },
       },
 
       // Shaders
@@ -68,42 +72,50 @@ module.exports = withImages({
           {
             loader: 'glslify-loader',
             options: {
-              transform: ['glslify-import']
-            }
-          }
-        ]
-      }
+              transform: ['glslify-import'],
+            },
+          },
+        ],
+      },
     ];
 
     // Plugins
-    const plugins = [
-      // Enable Web Workers
-      new WorkerPlugin({
-        globalObject: 'self'
-      })
-    ];
+    const plugins = [];
 
     // Add Loaders
+    /* eslint-disable-next-line */
     for (const rule of rules) {
-      config.module.rules.push(rule);
+      _config.module.rules.push(rule);
     }
 
     // Add Plugins
+    /* eslint-disable-next-line */
     for (const plugin of plugins) {
-      config.plugins.push(plugin);
+      _config.plugins.push(plugin);
     }
 
     // Resolve Extensions
-    config.resolve.extensions.push('.css');
-    config.resolve.extensions.push('.sass');
-    config.resolve.extensions.push('.scss');
-    config.resolve.extensions.push('.json');
+    _config.resolve.extensions.push('.css');
+    _config.resolve.extensions.push('.sass');
+    _config.resolve.extensions.push('.scss');
+    _config.resolve.extensions.push('.json');
 
     // Resolve Modules
-    config.resolve.modules.push('.');
-    config.resolve.modules.push('src');
+    _config.resolve.modules.push('.');
+    _config.resolve.modules.push('src');
+
+    // Result HMR Warnings
+    // See: https://github.com/vercel/next.js/issues/19865#issuecomment-810738415
+    const major = webpack.version.split('.')[0];
+
+    if (major === '5') {
+      _config.output.hotUpdateMainFilename = 'static/webpack/[fullhash].[runtime].hot-update.json';
+    }
 
     // Return Configuration
-    return config;
-  }
-});
+    return _config;
+  },
+};
+
+// Export Configuration
+module.exports = withImages(config);

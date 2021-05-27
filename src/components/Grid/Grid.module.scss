@@ -1,0 +1,72 @@
+.debug-grid {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  user-select: none;
+  pointer-events: none;
+
+  .vertical,
+  .horizontal {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .color {
+    width: 1px;
+    height: 100%;
+    background-color: #f00;
+  }
+
+  .horizontal {
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    .left-side {
+      display: flex;
+      justify-content: space-between;
+      width: 40%;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .center {
+      width: 20%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .right-side {
+      display:flex;
+      justify-content: space-between;
+      width: 40%;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+
+  .vertical {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .color {
+      width: 100%;
+      height: 1px;
+    }
+
+    .center {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+}

@@ -31,5 +31,5 @@ yarn-error.log*
 .env.production.local
 .env.development.local
 
-# Bark
+# Dogstudio
 bark.yml

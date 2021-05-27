@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "."
   },
   "exclude": ["dist", "build", "node_modules"]
 }

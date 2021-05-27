@@ -6,7 +6,7 @@
 // @requires {variable} $base-font-size
 html {
   @include font-smoothing; /* 1 */
-  font-size: strip-units($base-font-size) / 16 * 100%; /* 2 */
+  font-size: math.div(strip-units($base-font-size), 16) * 100%; /* 2 */
   -ms-text-size-adjust: 100%; /* 3 */ // scss-lint:disable VendorPrefix
   -webkit-text-size-adjust: 100%; /* 3 */ // scss-lint:disable VendorPrefix
 }
@@ -14,7 +14,7 @@ html {
 // Default text styles
 // -----------------------------------------------------------------------------
 body {
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   font-size: rem(16px);
-  line-height: (24 / 16);
+  line-height: math.div(24, 16);
 }
