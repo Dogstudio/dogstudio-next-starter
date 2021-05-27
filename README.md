@@ -7,7 +7,7 @@
 The Next.js starter with all the features you'll need to build blazing-fast websites and applications.
 
 - Opinionated dependencies
-- Next.js 10
+- Next.js 10.x
 - ESLint
 - i18next
 - Shaders
