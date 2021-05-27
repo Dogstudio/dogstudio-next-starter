@@ -75,3 +75,11 @@ npm run i18n:save
 # See: https://www.npmjs.com/package/npm-check-updates
 npm run upgrade
 ```
+
+## Contributing
+
+Please submit issues, pull requests or [contact us](devops@dogstudio.be). We are open to all kind of contributions.
+
+## License
+
+The `dogstudio-next-starter` repository is [MIT licensed](/LICENSE.md).
