@@ -1,4 +1,4 @@
-## Motley Crowd
+## Dogstudio
 
 The stack brings all the features you'll need to build a blazing-fast experience.
 
@@ -19,11 +19,11 @@ The stack brings all the features you'll need to build a blazing-fast experience
 ## Getting Started
 
 ```bash
-git clone git@github.com:setsnail/motleycrowd-website.git motleycrowd-website
+git clone git@github.com:Dogstudio/dogstudio-next-starter.git dogstudio-next-starter
 ```
 
 ```bash
-cd motleycrowd-website
+cd dogstudio-next-starter
 cp .env.example .env.local
 ```
 

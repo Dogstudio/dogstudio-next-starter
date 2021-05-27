@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Home | Motley Crowd</title>
+        <title>Home | Dogstudio</title>
       </Head>
 
       <div className={Styles['page']}>

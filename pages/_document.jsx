@@ -10,21 +10,21 @@ class CustomDocument extends Document {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 
           {/** Primary Meta Tags */}
-          <meta name="title" content="Motley Crowd" />
-          <meta name="description" content="Motley Crowd" />
+          <meta name="title" content="Dogstudio" />
+          <meta name="description" content="Dogstudio" />
 
           {/** Open Graph / Facebook */}
           <meta property="og:type" content="website" />
           <meta property="og:url" content="http://localhost:3001" />
-          <meta property="og:title" content="Motley Crowd" />
+          <meta property="og:title" content="Dogstudio" />
           <meta property="og:image" content="/assets/images/share.png" />
-          <meta property="og:description" content="Motley Crowd" />
+          <meta property="og:description" content="Dogstudio" />
 
           {/** Twitter */}
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content="http://localhost:3000" />
-          <meta property="twitter:title" content="Motley Crowd" />
-          <meta property="twitter:description" content="Motley Crowd" />
+          <meta property="twitter:title" content="Dogstudio" />
+          <meta property="twitter:description" content="Dogstudio" />
           <meta property="twitter:image" content="/assets/images/share.png" />
 
           {/** Touch Icon */}

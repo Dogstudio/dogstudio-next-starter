@@ -5,7 +5,7 @@ import React from 'react';
 const Custom404 = () => (
   <>
     <Head>
-      <title>404 | Motley Crowd</title>
+      <title>404 | Dogstudio</title>
     </Head>
 
     <p>404 - Error</p>
