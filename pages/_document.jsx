@@ -22,7 +22,7 @@ class CustomDocument extends Document {
 
           {/** Twitter */}
           <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="http://localhost:3000" />
+          <meta property="twitter:url" content="http://localhost:3001" />
           <meta property="twitter:title" content="Dogstudio" />
           <meta property="twitter:description" content="Dogstudio" />
           <meta property="twitter:image" content="/assets/images/share.png" />

@@ -39,3 +39,12 @@ export const BROWSER = PARSER.getBrowser();
 
 export const IS_MOBILE = DEVICE.type === 'mobile';
 export const IS_TABLET = DEVICE.type === 'tablet';
+
+// i18n
+export const DIR = (locale) => {
+  const rtl = ['ar', 'az', 'dv', 'he', 'ku', 'fa', 'ur'];
+
+  return rtl.indexOf(locale) !== -1
+    ? 'rtl'
+    : 'ltr';
+};

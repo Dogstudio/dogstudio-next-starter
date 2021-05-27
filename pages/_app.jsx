@@ -14,7 +14,6 @@ import Head from 'next/head';
 
 // React Components
 import Main from 'components/Main';
-import Grid from 'components/Grid';
 
 // React Contexts
 import { SampleProvider } from 'contexts/SampleContext';
@@ -36,8 +35,6 @@ const CustomApp = ({ Component, pageProps }) => (
     <SampleProvider>
       <Component {...pageProps} />
     </SampleProvider>
-
-    <Grid />
   </Main>
 );
 
