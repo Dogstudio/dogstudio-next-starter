@@ -1,14 +1,9 @@
-// Default typography settings, to be included as soon as possible in the HTML
-// 1. Make type rendering look crisper
-// 2. The default font size is 16px
-// 3. Prevent iOS and IE text size adjust after device orientation change, without disabling user zoom.
-//
-// @requires {variable} $base-font-size
 html {
-  @include font-smoothing; /* 1 */
-  font-size: math.div(strip-units($base-font-size), 16) * 100%; /* 2 */
-  -ms-text-size-adjust: 100%; /* 3 */ // scss-lint:disable VendorPrefix
-  -webkit-text-size-adjust: 100%; /* 3 */ // scss-lint:disable VendorPrefix
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 // Default text styles

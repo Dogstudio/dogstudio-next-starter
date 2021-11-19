@@ -1,46 +1,14 @@
-// Kennel Settings
-// -----------------------------------------------------------------------------
-$base-url: '~assets/';
-$base-font-size: 16px;
-$base-line-height: 2;
-
 // Random Variables
 // -----------------------------------------------------------------------------
 $PI: 3.1415926536;
 
-// Overrides Default Color Palette
+// Color Palette
 // -----------------------------------------------------------------------------
-// Main Colors
 $brand-black: #000;
-
-// Defaults
-$default-colors: (
-  social-twitter: #04aceb,
-  social-facebook: #3b5998,
-  social-linkedin: #0085af,
-  social-youtube: #cd201f,
-  social-instagram: #e12f67,
-
-  alert-valid: #61a450,
-  alert-warning: orange,
-  alert-error: #f6482e,
-);
-
-// Z Layers
-// -----------------------------------------------------------------------------
-$z-layers: (
-  'popup': 1000,
-  'header': 900,
-);
+$brand-white: #fff;
 
 // Responsive Settings
 // -----------------------------------------------------------------------------
 $mq-responsive: true;
 $mq-static-breakpoint: xl;
-$mq-show-breakpoints: (xxs, xs, s, m, l, xl, xxl);
-
-// Grid
-// -----------------------------------------------------------------------------
-$grid-count: 16;
-$grid-col-width: 63px;
-$grid-gutter: 18px;
+$mq-show-breakpoints: (xxs, xs, s, m, l, xl, xxl, xxxl);

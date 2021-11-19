@@ -1,8 +1,10 @@
 import React from 'react';
+
+// Next.js
 import { useRouter } from 'next/router';
 
-// Utils
-import { DIR } from 'utils/constants';
+// Helpers
+import { getLanguageDirection } from 'utils/helpers/language';
 
 // Styles
 import Styles from './Main.module.scss';
@@ -19,16 +21,13 @@ const Main = ({ children }) => {
    */
   return (
     <main
-      dir={DIR(locale)}
+      dir={getLanguageDirection(locale)}
       className={Styles['site-wrapper']}
     >
       {children}
     </main>
   );
 };
-
-// Track Re-Renders
-Main.whyDidYouRender = true;
 
 // Export Pure Component
 export default React.memo(Main);

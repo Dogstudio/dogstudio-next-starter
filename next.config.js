@@ -4,22 +4,26 @@ const path = require('path');
 // Extensions
 const withImages = require('next-images');
 
-// i18n
-const { i18n } = require('./next-i18next.config');
+// Constants
+const DEFAULT = process.env.NEXT_PUBLIC_I18N_DEFAULT;
+const LANGUAGES = process.env.NEXT_PUBLIC_I18N_LANGUAGES.split('|');
 
 // Configuration
 const config = {
   // Locales Options
-  i18n,
+  i18n: {
+    locales: LANGUAGES,
+    localeDetection: true,
+    defaultLocale: DEFAULT,
+  },
 
   // Webpack 5
   // See: https://nextjs.org/docs/messages/webpack5
-  future: {
-    webpack5: true,
-  },
+  webpack5: true,
 
   // Images Options
   images: {
+    disableStaticImages: true,
     deviceSizes: [
       320,
       450,

@@ -1,21 +1,20 @@
 @use 'sass:math';
 @use 'sass:list';
 
-// Kennel
+// Vendors
 // -----------------------------------------------------------------------------
-@import 'kennel/kennel';
-
-// Sass MQ
-// -----------------------------------------------------------------------------
-@import 'sass-mq/mq';
+@import 'vendors/sass-mq/mq';
 
 // Breakpoints
 // -----------------------------------------------------------------------------
 @import 'utils/breakpoints';
 
-// Utilities
+// Variables
 // -----------------------------------------------------------------------------
 @import 'utils/variables';
+
+// Utilities
+// -----------------------------------------------------------------------------
 @import 'utils/mixins';
 @import 'utils/functions';
 @import 'utils/animations';
@@ -26,7 +25,7 @@
 
 // Base
 // -----------------------------------------------------------------------------
+@import 'base/fonts';
 @import 'base/reset';
 @import 'base/base';
 @import 'base/typography';
-@import 'base/transitions';

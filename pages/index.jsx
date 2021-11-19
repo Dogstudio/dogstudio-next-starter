@@ -1,47 +1,22 @@
 import React from 'react';
+
+// Next.js
 import Head from 'next/head';
 
-// i18n
-import { useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-
-// Styles
-import Styles from './index.module.scss';
+import Icon from 'components/Icon';
 
 // Page Component
-const Home = () => {
-  /**
-   * i18n:
-   */
-  const { t } = useTranslation();
+const Home = () => (
+  <>
+    <Head>
+      <title>Home | Dogstudio</title>
+    </Head>
 
-  /**
-   * DOM:
-   */
-  return (
-    <>
-      <Head>
-        <title>Home | Dogstudio</title>
-      </Head>
+    <h1>Hello World!</h1>
 
-      <div className={Styles['page']}>
-        <h1>{t('Hello World!')}</h1>
-      </div>
-    </>
-  );
-};
-
-// Load Translations
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common'])),
-    },
-  };
-}
-
-// Track Re-Renders
-Home.whyDidYouRender = false;
+    <Icon name="apple" width={14} height={16} />
+  </>
+);
 
 // Export Pure Component
 export default React.memo(Home);

@@ -3,6 +3,12 @@
 html {
   height: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  -webkit-tap-highlight-color: transparent;
 }
 
 // Make all elements from the DOM inherit from the parent box-sizing
@@ -15,10 +21,6 @@ html {
   &::after {
     box-sizing: inherit;
   }
-
-  &[disabled] {
-    cursor: not-allowed !important;
-  }
 }
 
 // Set up body size to fill screen
@@ -26,4 +28,14 @@ html {
 body {
   width: 100%;
   height: 100%;
+}
+
+// Set up global SVG container
+// -----------------------------------------------------------------------------
+.svg {
+  display: inline-block;
+
+  svg {
+    display: block;
+  }
 }

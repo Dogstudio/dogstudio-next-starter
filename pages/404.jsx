@@ -1,7 +1,9 @@
-import Head from 'next/head';
 import React from 'react';
 
-// Custom 404 Error
+// Next.js
+import Head from 'next/head';
+
+// Page Component
 const Custom404 = () => (
   <>
     <Head>
@@ -11,9 +13,6 @@ const Custom404 = () => (
     <p>404 - Error</p>
   </>
 );
-
-// Track Re-Renders
-Custom404.whyDidYouRender = true;
 
 // Export Pure Component
 export default React.memo(Custom404);

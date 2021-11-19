@@ -1,3 +1,4 @@
+// Next.js
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 // Custom Document
@@ -15,14 +16,14 @@ class CustomDocument extends Document {
 
           {/** Open Graph / Facebook */}
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="http://localhost:3001" />
+          <meta property="og:url" content="http://localhost:3000" />
           <meta property="og:title" content="Dogstudio" />
           <meta property="og:image" content="/assets/images/share.png" />
           <meta property="og:description" content="Dogstudio" />
 
           {/** Twitter */}
           <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="http://localhost:3001" />
+          <meta property="twitter:url" content="http://localhost:3000" />
           <meta property="twitter:title" content="Dogstudio" />
           <meta property="twitter:description" content="Dogstudio" />
           <meta property="twitter:image" content="/assets/images/share.png" />
@@ -35,9 +36,6 @@ class CustomDocument extends Document {
 
           {/** Favicon */}
           <link rel="icon" type="image/png" href="/favicon.ico" />
-
-          {/** Custom Fonts */}
-          <link rel="stylesheet" href="/assets/fonts/fonts.css" />
 
           {/** Modernizr */}
           <script type="text/javascript" src="/vendors/modernizr.js" async />

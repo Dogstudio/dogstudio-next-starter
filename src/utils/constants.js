@@ -1,14 +1,10 @@
 // Dependencies
-import qs from 'query-string';
 import UAParser from 'ua-parser-js';
 
 // Server vs Browser
 // See: https://github.com/vercel/next.js/issues/5354#issuecomment-520305040
 export const IS_SERVER = typeof window === 'undefined';
 export const IS_BROWSER = typeof window !== 'undefined';
-
-// URL Queries
-export const QUERIES = IS_BROWSER ? qs.parse(window.location.search) : {};
 
 // Environment Constants
 export const PROD = process.env.NODE_ENV !== 'development';
@@ -22,8 +18,9 @@ export const BREAKPOINTS = {
   S: 600,
   M: 768,
   L: 1024,
-  XL: 1360,
+  XL: 1340,
   XXL: 1440,
+  XXXL: 1920,
 };
 
 // UA Constants
@@ -40,11 +37,6 @@ export const BROWSER = PARSER.getBrowser();
 export const IS_MOBILE = DEVICE.type === 'mobile';
 export const IS_TABLET = DEVICE.type === 'tablet';
 
-// i18n
-export const DIR = (locale) => {
-  const rtl = ['ar', 'az', 'dv', 'he', 'ku', 'fa', 'ur'];
-
-  return rtl.indexOf(locale) !== -1
-    ? 'rtl'
-    : 'ltr';
-};
+// Grid Constants
+export const DEFAULT_GRID_GUTTER = 18;
+export const DEFAULT_GRID_COLUMNS = 16;

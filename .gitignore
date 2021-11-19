@@ -31,5 +31,11 @@ yarn-error.log*
 .env.production.local
 .env.development.local
 
-# Dogstudio
+# Bark
 bark.yml
+
+# JetBrains IDE
+/.idea
+
+# Vercel
+.vercel
