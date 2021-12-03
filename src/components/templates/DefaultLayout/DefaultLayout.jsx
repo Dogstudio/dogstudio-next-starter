@@ -1,16 +1,27 @@
 import React from 'react';
+
+// Dependencies
 import ClassNames from 'classnames';
 
 // Styles
 import Styles from './DefaultLayout.module.scss';
 
-const DefaultLayout = ({ children, className}) => {
+// Component
+const DefaultLayout = ({ children, className }) => {
+  /**
+   * Dynamic Classnames:
+   */
+  const classNames = ClassNames(className, Styles['page-wrapper']);
+
+  /**
+   * DOM:
+   */
   return (
-    <div className={ClassNames(className, Styles['page-wrapper'])}>
+    <div className={classNames}>
       {children}
     </div>
-  )
-}
+  );
+};
 
 // Export Pure Component
 export default React.memo(DefaultLayout);

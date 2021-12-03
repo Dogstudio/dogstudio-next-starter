@@ -6,7 +6,9 @@ import 'on-browser';
 import Head from 'next/head';
 
 // React Components
+// Molecules
 import Grid from 'components/molecules/Grid';
+// Organisms
 import Main from 'components/organisms/Main';
 
 // Global Styles
