@@ -2,10 +2,21 @@
 // -----------------------------------------------------------------------------
 $PI: 3.1415926536;
 
-// Color Palette
+// Color Palettes
 // -----------------------------------------------------------------------------
 $brand-black: #000;
 $brand-white: #fff;
+
+// Fonts Variables
+// -----------------------------------------------------------------------------
+$base-font-size: 16px;
+$base-line-height: 2;
+
+$fallback-font-serif: 'Times New Roman', 'Georgia', serif;
+$fallback-font-sans-serif: 'Helvetica', 'Arial', sans-serif;
+
+$font-serif: $fallback-font-serif;
+$font-sans-serif: $fallback-font-sans-serif;
 
 // Responsive Settings
 // -----------------------------------------------------------------------------

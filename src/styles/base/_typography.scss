@@ -1,5 +1,5 @@
 html {
-  font-size: 100%;
+  font-size: math.div(math.div($base-font-size, ($base-font-size * 0 + 1)), 16) * 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -9,7 +9,7 @@ html {
 // Default text styles
 // -----------------------------------------------------------------------------
 body {
-  font-family: 'Helvetica', 'Arial', sans-serif;
-  font-size: rem(16px);
-  line-height: math.div(24, 16);
+  font-family: $font-sans-serif;
+  font-size: 1rem;
+  line-height: $base-line-height;
 }
