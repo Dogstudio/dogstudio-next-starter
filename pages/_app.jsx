@@ -6,8 +6,8 @@ import 'on-browser';
 import Head from 'next/head';
 
 // React Components
-import Main from 'components/Main';
-import Grid from 'components/Grid';
+import Grid from 'components/molecules/Grid';
+import Main from 'components/organisms/Main';
 
 // Global Styles
 import 'styles/global';
