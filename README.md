@@ -11,6 +11,7 @@ The Next.js starter with all the features you'll need to build blazing-fast webs
 - SCSS/SASS
 - CSS Modules
 - Web Workers
+- [Atomic Design Pattern](https://bradfrost.com/blog/post/atomic-web-design/)
 
 ## Prerequisites
 
