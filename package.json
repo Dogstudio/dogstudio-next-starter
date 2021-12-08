@@ -1,6 +1,7 @@
 {
-  "name": "@dogstudio/next-starter",
-  "version": "1.0.3",
+  "name": "@dogstudio/dogstudio-next-starter",
+  "version": "1.1.0",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "lint": "next lint",

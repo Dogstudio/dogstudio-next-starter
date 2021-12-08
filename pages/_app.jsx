@@ -2,7 +2,7 @@
 import 'on-server';
 import 'on-browser';
 
-// Next.js / React
+// Next.js
 import Head from 'next/head';
 
 // React Components
