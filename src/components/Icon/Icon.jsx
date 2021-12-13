@@ -1,35 +1,35 @@
-import React from 'react';
+import React from 'react'
 
 // Next.js
-import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic'
 
 // Dependencies
-import ClassNames from 'classnames';
+import ClassNames from 'classnames'
 
 // Component
 const Icon = (props) => {
   /**
    * Properties:
    */
-  const { className, name, width, height } = props;
+  const { className, name, width, height } = props
 
   /**
    * Dynamic Import:
    */
-  const Component = dynamic(() => import(`./Icons/icon-${name}.jsx`), { ssr: false });
+  const Component = dynamic(() => import(`./Icons/icon-${name}.jsx`), { ssr: false })
 
   /**
    * Dynamic Classnames:
    */
-  const classNames = ClassNames(className, 'svg', `svg--${name}`);
+  const classNames = ClassNames(className, 'svg', `svg--${name}`)
 
   /**
    * Inline CSS:
    */
   const styles = {
     width: `${width}px`,
-    height: `${height}px`,
-  };
+    height: `${height}px`
+  }
 
   /**
    * DOM:
@@ -46,11 +46,8 @@ const Icon = (props) => {
         />
       </span>
     )
-  );
-};
-
-// Track Re-Renders
-Icon.whyDidYouRender = true;
+  )
+}
 
 // Export Pure Component
-export default React.memo(Icon);
+export default React.memo(Icon)

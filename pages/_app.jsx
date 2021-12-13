@@ -1,16 +1,16 @@
 // Browser / Server Imports
-import 'on-server';
-import 'on-browser';
+import 'on-server'
+import 'on-browser'
 
 // Next.js
-import Head from 'next/head';
+import Head from 'next/head'
 
 // React Components
-import Main from 'components/Main';
-import Grid from 'components/Grid';
+import Main from 'components/Main'
+import Grid from 'components/Grid'
 
 // Global Styles
-import 'styles/global';
+import 'styles/global'
 
 // Custom Application
 const CustomApp = ({ Component, pageProps }) => (
@@ -29,6 +29,6 @@ const CustomApp = ({ Component, pageProps }) => (
 
     <Grid />
   </>
-);
+)
 
-export default CustomApp;
+export default CustomApp

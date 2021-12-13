@@ -1,20 +1,20 @@
-import React from 'react';
+import React from 'react'
 
 // Next.js
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 
 // Helpers
-import { getLanguageDirection } from 'utils/helpers/language';
+import { getLanguageDirection } from 'utils/helpers/language'
 
 // Styles
-import Styles from './Main.module.scss';
+import Styles from './Main.module.scss'
 
 // Component
 const Main = ({ children }) => {
   /**
    * Router:
    */
-  const { locale } = useRouter();
+  const { locale } = useRouter()
 
   /**
    * DOM:
@@ -26,8 +26,8 @@ const Main = ({ children }) => {
     >
       {children}
     </main>
-  );
-};
+  )
+}
 
 // Export Pure Component
-export default React.memo(Main);
+export default React.memo(Main)

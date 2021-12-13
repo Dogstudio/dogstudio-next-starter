@@ -5,13 +5,14 @@
       "*": [
         "*",
         "src/*",
-        "pages/*",
-      ],
+        "pages/*"
+      ]
     }
   },
   "exclude": [
     "dist",
     "build",
+    ".next",
     "node_modules"
   ]
 }

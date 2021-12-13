@@ -1,2 +1,5 @@
+public/**/*.js
+public/**/*.ts
+
 src/glxp/**/*.ts
 src/glxp/**/*.js
