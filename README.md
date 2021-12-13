@@ -5,8 +5,6 @@ The Next.js starter with all the features you'll need to build blazing-fast webs
 - Next 12
 - Shaders
 - SCSS/SASS
-- CSS Modules
-- Web Workers
 
 ## Prerequisites
 
