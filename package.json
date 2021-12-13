@@ -40,6 +40,6 @@
     "file-loader": "^6.2.0",
     "glslify-import": "^3.1.0",
     "glslify-loader": "^2.0.0",
-    "sass": "^1.44.0"
+    "sass": "^1.45.0"
   }
 }
