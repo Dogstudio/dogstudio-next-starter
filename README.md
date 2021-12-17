@@ -33,6 +33,7 @@ We recommend the following documentations to master the stack:
 - [React](https://reactjs.org/docs/getting-started.html)
 - [Next.js](https://nextjs.org/docs/getting-started)
 - [CSS Modules](https://github.com/css-modules/css-modules)
+- [Atomic Design Pattern](https://atomicdesign.bradfrost.com/table-of-contents/)
 
 ## References
 
