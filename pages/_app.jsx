@@ -5,8 +5,9 @@ import 'on-browser'
 // Next.js
 import Head from 'next/head'
 
+// React Layouts
+import Main from 'layouts/Main'
 // React Components
-import Main from 'components/partials/Main'
 import Grid from 'components/partials/Grid'
 
 // Global Styles
