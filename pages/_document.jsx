@@ -12,20 +12,32 @@ class CustomDocument extends Document {
 
           {/** Primary Meta Tags */}
           <meta name="title" content="Dogstudio | Next.js Starter" />
-          <meta name="description" content="Opinionated Next.js starter by Dogstudio" />
+          <meta
+            name="description"
+            content="Opinionated Next.js starter by Dogstudio"
+          />
 
           {/** Open Graph / Facebook */}
           <meta property="og:type" content="website" />
           <meta property="og:url" content="http://localhost:3000" />
           <meta property="og:title" content="Dogstudio | Next.js Starter" />
           <meta property="og:image" content="/assets/images/share.png" />
-          <meta property="og:description" content="Opinionated Next.js starter by Dogstudio" />
+          <meta
+            property="og:description"
+            content="Opinionated Next.js starter by Dogstudio"
+          />
 
           {/** Twitter */}
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content="http://localhost:3000" />
-          <meta property="twitter:title" content="Dogstudio | Next.js Starter" />
-          <meta property="twitter:description" content="Opinionated Next.js starter by Dogstudio" />
+          <meta
+            property="twitter:title"
+            content="Dogstudio | Next.js Starter"
+          />
+          <meta
+            property="twitter:description"
+            content="Opinionated Next.js starter by Dogstudio"
+          />
           <meta property="twitter:image" content="/assets/images/share.png" />
 
           {/** Favicon */}

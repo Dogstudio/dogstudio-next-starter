@@ -1,4 +1,4 @@
-function sayHello () {
+function sayHello() {
   // Chrome Log
   if (navigator.userAgent.toLowerCase().includes('chrome')) {
     const args = [
@@ -8,7 +8,7 @@ function sayHello () {
       'background: #131419; padding:5px 0;',
       'color: #fff; background: #1c1c1c; padding:5px 0;',
       'background: #fff; padding:5px 0;',
-      'color: #e43333; background: #fff; padding:5px 0;'
+      'color: #e43333; background: #fff; padding:5px 0;',
     ]
 
     // Log Message

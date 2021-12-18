@@ -20,10 +20,7 @@ const Main = ({ children }) => {
    * DOM:
    */
   return (
-    <main
-      dir={getLanguageDirection(locale)}
-      className={Styles['site-wrapper']}
-    >
+    <main dir={getLanguageDirection(locale)} className={Styles['site-wrapper']}>
       {children}
     </main>
   )

@@ -16,7 +16,9 @@ const Icon = (props) => {
   /**
    * Dynamic Import:
    */
-  const Component = dynamic(() => import(`./Icons/icon-${name}.jsx`), { ssr: false })
+  const Component = dynamic(() => import(`./Icons/icon-${name}.jsx`), {
+    ssr: false,
+  })
 
   /**
    * Dynamic Classnames:
@@ -28,7 +30,7 @@ const Icon = (props) => {
    */
   const styles = {
     width: `${width}px`,
-    height: `${height}px`
+    height: `${height}px`,
   }
 
   /**
@@ -36,14 +38,8 @@ const Icon = (props) => {
    */
   return (
     Component && (
-      <span
-        style={styles}
-        className={classNames}
-      >
-        <Component
-          width={width}
-          height={height}
-        />
+      <span style={styles} className={classNames}>
+        <Component width={width} height={height} />
       </span>
     )
   )

@@ -14,7 +14,7 @@ const config = {
   i18n: {
     locales: LANGUAGES,
     localeDetection: true,
-    defaultLocale: DEFAULT
+    defaultLocale: DEFAULT,
   },
 
   // Webpack 5
@@ -24,27 +24,26 @@ const config = {
   // Images Options
   images: {
     disableStaticImages: true,
-    deviceSizes: [
-      320,
-      450,
-      600,
-      768,
-      1024,
-      1360,
-      1440
-    ]
+    deviceSizes: [320, 450, 600, 768, 1024, 1360, 1440],
   },
 
   // SASS Options
   sassLoaderOptions: {
-    includePaths: [
-      path.join(__dirname),
-      path.join(__dirname, 'src')
-    ]
+    includePaths: [path.join(__dirname), path.join(__dirname, 'src')],
   },
 
   // Images Options
-  fileExtensions: ['jpg', 'jpeg', 'png', 'svg', 'gif', 'ico', 'webp', 'jp2', 'avif'],
+  fileExtensions: [
+    'jpg',
+    'png',
+    'svg',
+    'gif',
+    'ico',
+    'jp2',
+    'avif',
+    'webp',
+    'jpeg',
+  ],
   inlineImageLimit: false,
 
   // Extend Webpack Configuration
@@ -62,9 +61,9 @@ const config = {
           options: {
             name,
             outputPath: 'static/media/',
-            publicPath: '/_next/static/media'
-          }
-        }
+            publicPath: '/_next/static/media',
+          },
+        },
       },
 
       // Shaders
@@ -76,11 +75,11 @@ const config = {
           {
             loader: 'glslify-loader',
             options: {
-              transform: ['glslify-import']
-            }
-          }
-        ]
-      }
+              transform: ['glslify-import'],
+            },
+          },
+        ],
+      },
     ]
 
     // Plugins
@@ -113,12 +112,13 @@ const config = {
     const major = webpack.version.split('.')[0]
 
     if (major === '5') {
-      _config.output.hotUpdateMainFilename = 'static/webpack/[fullhash].[runtime].hot-update.json'
+      _config.output.hotUpdateMainFilename =
+        'static/webpack/[fullhash].[runtime].hot-update.json'
     }
 
     // Return Configuration
     return _config
-  }
+  },
 }
 
 // Export Configuration

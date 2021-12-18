@@ -37,7 +37,7 @@ const Grid = () => {
               // Styles
               const style = {
                 marginLeft: 0,
-                marginRight: 0
+                marginRight: 0,
               }
 
               if (i !== 0 && DEBUG_GRID_GUTTER) {

@@ -21,8 +21,8 @@
     padding-left: 30px;
     padding-right: 30px;
     box-sizing: initial;
-    border-right: 1px solid rgba(green, .1);
-    border-left: 1px solid rgba(green, .1);
+    border-right: 1px solid rgba(green, 0.1);
+    border-left: 1px solid rgba(green, 0.1);
     justify-content: space-between;
 
     @include mq($from: 'xl') {
@@ -40,7 +40,7 @@
     flex-basis: 100%;
     flex-grow: 0;
     flex-shrink: 1;
-    background-color: rgba(red, .1);
+    background-color: rgba(red, 0.1);
 
     + .grid__column {
       margin-left: 19px;

@@ -5,9 +5,7 @@
  * @return {String} Layout direction
  */
 export const getLanguageDirection = (lang) => {
-  const rtl = ['ar', 'az', 'dv', 'he', 'ku', 'fa', 'ur']
-
-  return rtl.includes(lang)
+  return ['ar', 'az', 'dv', 'he', 'ku', 'fa', 'ur'].includes(lang)
     ? 'rtl'
     : 'ltr'
 }
