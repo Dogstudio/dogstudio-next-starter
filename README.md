@@ -3,7 +3,7 @@
 The Next.js starter with all the features you'll need to build blazing-fast websites and applications.
 
 - Next 12
-- Shaders
+- Prettier
 - SCSS/SASS
 
 ## Prerequisites
