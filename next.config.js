@@ -5,14 +5,14 @@ const path = require('path')
 const withImages = require('next-images')
 
 // Constants
-const DEFAULT = process.env.NEXT_PUBLIC_I18N_DEFAULT
-const LANGUAGES = process.env.NEXT_PUBLIC_I18N_LANGUAGES.split('|')
+const DEFAULT = process.env.NEXT_PUBLIC_DEFAULT_LOCALE
+const LOCALES = process.env.NEXT_PUBLIC_SUPPORTED_LOCALES.split('|')
 
 // Configuration
 const config = {
   // Locales Options
   i18n: {
-    locales: LANGUAGES,
+    locales: LOCALES,
     localeDetection: true,
     defaultLocale: DEFAULT,
   },
