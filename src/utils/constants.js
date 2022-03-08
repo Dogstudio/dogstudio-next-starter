@@ -38,7 +38,3 @@ export const BROWSER = PARSER.getBrowser()
 
 export const IS_MOBILE = DEVICE.type === 'mobile'
 export const IS_TABLET = DEVICE.type === 'tablet'
-
-// Grid Constants
-export const DEFAULT_GRID_GUTTER = 18
-export const DEFAULT_GRID_COLUMNS = 16

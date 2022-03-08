@@ -7,8 +7,19 @@
 /build
 
 # Front-End
-public/**/*.js
+pages/_document.jsx
+
 public/**/*.ts
+public/**/*.js
+public/**/*.tsx
+public/**/*.jsx
 
 src/glxp/**/*.ts
 src/glxp/**/*.js
+src/glxp/**/*.tsx
+src/glxp/**/*.jsx
+
+src/vendors/**/*.ts
+src/vendors/**/*.js
+src/vendors/**/*.tsx
+src/vendors/**/*.jsx

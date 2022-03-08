@@ -1,108 +1,105 @@
-// http://meyerweb.com/eric/tools/css/reset/
-// v2.0 | 20110126
-// License: none (public domain)
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
+p,
+a,
+q,
+s,
+b,
+u,
+i,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
 em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
 tt,
-var,
-b,
-u,
-i,
-center,
 dl,
 dt,
 dd,
 ol,
 ul,
 li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
 tr,
 th,
 td,
-main,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
+pre,
+div,
+big,
+del,
+dfn,
+img,
+ins,
+kbd,
+sub,
+sup,
+var,
 nav,
-output,
+html,
+body,
+span,
+abbr,
+cite,
+code,
+samp,
+form,
+main,
+menu,
 ruby,
-section,
-summary,
 time,
 mark,
 audio,
-video {
+video,
+small,
+label,
+table,
+tbody,
+tfoot,
+thead,
+aside,
+embed,
+output,
+center,
+strike,
+strong,
+legend,
+applet,
+object,
+iframe,
+canvas,
+figure,
+footer,
+header,
+hgroup,
+section,
+summary,
+caption,
+acronym,
+address,
+article,
+details,
+fieldset,
+blockquote,
+figcaption {
+  border: 0;
   margin: 0;
   padding: 0;
-  border: 0;
   font: inherit;
   font-size: 100%;
   vertical-align: baseline;
 }
 
+nav,
 main,
-article,
+menu,
 aside,
-details,
-figcaption,
 figure,
 footer,
 header,
 hgroup,
-menu,
-nav,
-section {
+article,
+details,
+section,
+figcaption {
   display: block;
 }
 
@@ -110,31 +107,31 @@ body {
   line-height: 1;
 }
 
+a {
+  text-decoration: none;
+}
+
 ol,
 ul {
   list-style: none;
 }
 
-blockquote,
-q {
+q,
+blockquote {
   quotes: none;
 }
 
-blockquote::before,
-blockquote::after,
+q::after,
 q::before,
-q::after {
+blockquote::after,
+blockquote::before {
   content: '';
-  content: none; /* Browser Support */ // scss-lint:disable DuplicateProperty
+  content: none;
 }
 
 table {
   border-spacing: 0;
   border-collapse: collapse;
-}
-
-a {
-  text-decoration: none;
 }
 
 button {

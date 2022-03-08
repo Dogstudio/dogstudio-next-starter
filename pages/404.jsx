@@ -10,7 +10,7 @@ const Custom404 = () => (
       <title>404 | Dogstudio</title>
     </Head>
 
-    <p>404 - Error</p>
+    <p>Error 404</p>
   </>
 )
 
