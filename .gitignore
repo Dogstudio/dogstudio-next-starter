@@ -23,19 +23,17 @@ yarn-error.log*
 # Local `env` Files
 .env
 .env.test
+.env.local
+.env.*.local
 .env.production
 .env.development
-
-.env.local
-.env.test.local
-.env.production.local
-.env.development.local
 
 # Bark
 bark.yml
 
-# JetBrains IDE
+# IDEs
 /.idea
+/.vscode
 
 # Vercel
 .vercel
