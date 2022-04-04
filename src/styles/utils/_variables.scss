@@ -18,8 +18,31 @@ $fallback-font-sans-serif: 'Helvetica', 'Arial', sans-serif;
 $font-serif: $fallback-font-serif;
 $font-sans-serif: $fallback-font-sans-serif;
 
+// Grid System Settings
+// -----------------------------------------------------------------------------
+$config: (
+  xxxs: (
+    grid-size: calc(100vw - 40px),
+    grid-edge: 20px,
+    grid-gutter: 20px,
+    grid-columns: 4,
+  ),
+  l: (
+    grid-size: calc(100vw - 100px),
+    grid-edge: 50px,
+    grid-gutter: 20px,
+    grid-columns: 12,
+  ),
+  xl: (
+    grid-size: calc(100vw - 100px),
+    grid-edge: 50px,
+    grid-gutter: 20px,
+    grid-columns: 16,
+  ),
+);
+
 // Responsive Settings
 // -----------------------------------------------------------------------------
 $mq-responsive: true;
 $mq-static-breakpoint: xl;
-$mq-show-breakpoints: (xxs, xs, s, m, l, xl, xxl, xxxl);
+$mq-show-breakpoints: (xxxs, xxs, xs, s, m, l, xl, xxl, xxxl);

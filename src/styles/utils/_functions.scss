@@ -1,1 +1,79 @@
-// Silence is golden.
+@use 'sass:map';
+@use 'sass:math';
+
+// Variables
+@import './variables';
+
+/**
+ * The `gs-calc` function will calculate the property value it is used on based on the grid system configuration.
+ *
+ * @param {Number} $column      : Number of column to use or span over
+ * @param {Number} $gutter      : Number of gutter to use or span over
+ * @param {Number} $grid-size   : Width of the grid
+ * @param {Number} $grid-gutter : Width of the gutters
+ * @param {Number} $grid-columns: Maximum number of columns
+ *
+ * @return CSS equation for the property the function is used on
+ */
+@function gs-calc($column, $gutter, $grid-size: 100vw, $grid-gutter: 20px, $grid-columns: 12) {
+  $column: math.clamp(0, $column, $grid-columns);
+  $gutter: math.clamp(0, $gutter, $grid-columns - 1);
+
+  $unit-column: calc((min(100vw, #{$grid-size}) - ((#{$grid-columns} - 1) * #{$grid-gutter})) / #{$grid-columns});
+  $unit-gutter: $grid-gutter;
+
+  $width-column: calc(#{$unit-column} * #{$column});
+  $width-gutter: calc(#{$unit-gutter} * #{$gutter});
+
+  @return calc(#{$width-column} + #{$width-gutter});
+}
+
+/**
+ * The `gs` function will return the CSS equation for the property it is used on based on the grid system configuration.
+ *
+ * @param {Number} $column: Number of column to use or span over
+ * @param {Number} $gutter: Number of gutter to use or span over
+ * @param {String} $use   : The key of the configuration to use
+ *
+ * @return CSS equation for the property the function is used on
+ */
+@function gs($column: 0, $gutter: 0, $use) {
+  @if (map.has-key($config, $use)) {
+    /**
+     * Configuration:
+     *
+     * We get the configuration to use.
+     * See: `src/styles/variables.scss`
+     */
+    $config: map-get($config, $use);
+
+    /**
+     * SCSS Variables:
+     *
+     * We build the SCSS variables to transfer the `gs-calc` function.
+     * See: `src/styles/functions/_gs-calc.scss`
+     */
+    $grid-size: map-get($config, 'grid-size');
+    $grid-gutter: map-get($config, 'grid-gutter');
+    $grid-columns: map-get($config, 'grid-columns');
+
+    /**
+     * Computation:
+     */
+    $value: gs-calc(
+      $column,
+      $gutter,
+      $grid-size,
+      $grid-gutter,
+      $grid-columns,
+    );
+
+    /**
+    * Return CSS equation:
+    */
+    @return $value;
+  }
+
+  @warn 'Unknow key in grid configuration: #{$use}';
+  @return 0;
+}

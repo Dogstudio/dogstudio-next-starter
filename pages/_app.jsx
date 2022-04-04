@@ -6,10 +6,15 @@ import 'on-browser'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
-// Utilities
+// Components
+// -- Partials
+import Grid from 'components/partials/Grid'
+
+// Utils
 import { getLocaleDirection } from 'utils/helpers/language'
 
 // Global Styles
+import 'styles/grid'
 import 'styles/global'
 
 // Custom Application
@@ -34,6 +39,8 @@ const CustomApp = ({ Component, pageProps }) => {
         </Head>
 
         <Component {...pageProps} />
+
+        <Grid />
       </main>
     </>
   )

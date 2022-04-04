@@ -253,7 +253,18 @@ $mq-media-type: all !default;
     }
 
     @media #{$media-type + $media-query} {
-      @content;
+      @if ($from and not $until) {
+        @content($from);
+      }
+      @else if ($until and not $from) {
+        @content($until);
+      }
+      @else if ($from and $until) {
+        @content($from, $until);
+      }
+      @else {
+        @content;
+      }
     }
   }
 }

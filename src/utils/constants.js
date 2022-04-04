@@ -13,6 +13,7 @@ export const PREVIEW = process.env.NEXT_PUBLIC_APP_PREVIEW === 'true'
 
 // Responsive Constants
 export const BREAKPOINTS = {
+  XXXS: 0,
   XXS: 320,
   XS: 450,
   S: 600,

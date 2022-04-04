@@ -13,15 +13,13 @@
 // -----------------------------------------------------------------------------
 @import 'utils/variables';
 
-// Utilities
+// Utils
 // -----------------------------------------------------------------------------
 @import 'utils/mixins';
+@import 'utils/utilities';
 @import 'utils/functions';
 @import 'utils/animations';
-
-// Utilities
-// -----------------------------------------------------------------------------
-@import 'utils/utilities';
+@import 'utils/transitions';
 
 // Base
 // -----------------------------------------------------------------------------
