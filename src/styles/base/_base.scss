@@ -54,34 +54,32 @@ body {
 
 // Create CSS variables and add global styles based on grid configuration
 // -----------------------------------------------------------------------------
-@each $key, $value in $mq-breakpoints {
-  @if map.has-key($config, $key) {
+@each $use, $value in $mq-breakpoints {
+  @if map.has-key($config, $use) {
     /**
      * Configuration:
      *
      * We get the configuration to use.
-     * See: `src/styles/variables.scss`
      */
-    $params: map-get($config, $key);
+    $props: map-get($config, $use);
 
-    @media screen and (min-width: #{$value}) {
+    @include mq($from: $use) using ($from) {
       /**
        * SCSS Variables:
        *
        * We build our SCSS variables to store then in CSS ones for further usage.
        */
-      $grid-columns: map-get($params, 'grid-columns');
+      $grid-columns: map-get($props, 'grid-columns');
       $grid-gutters: $grid-columns - 1;
 
-      $grid-size: map-get($params, 'grid-size');
-      $grid-edge: map-get($params, 'grid-edge');
-      $grid-gutter: map-get($params, 'grid-gutter');
+      $grid-size: map-get($props, 'grid-size');
+      $grid-edge: map-get($props, 'grid-edge');
+      $grid-gutter: map-get($props, 'grid-gutter');
 
       /**
        * CSS Variables:
        *
        * We create CSS variables and fill them SCSS value in order to reuse them in JS.
-       * See: `src/scripts/Grid.js`
        */
       :root {
         --grid-columns: #{$grid-columns};
@@ -98,7 +96,6 @@ body {
        * Global Styles:
        *
        * We apply some global styles to the DOM elements based on our configuration of the grid system.
-       * See: `src/styles/variables.scss`
        */
       .site-wrapper {
         padding-left: $grid-edge;

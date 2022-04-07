@@ -43,19 +43,17 @@
      * Configuration:
      *
      * We get the configuration to use.
-     * See: `src/styles/variables.scss`
      */
-    $config: map-get($config, $use);
+    $props: map-get($config, $use);
 
     /**
      * SCSS Variables:
      *
      * We build the SCSS variables to transfer the `gs-calc` function.
-     * See: `src/styles/functions/_gs-calc.scss`
      */
-    $grid-size: map-get($config, 'grid-size');
-    $grid-gutter: map-get($config, 'grid-gutter');
-    $grid-columns: map-get($config, 'grid-columns');
+    $grid-size: map-get($props, 'grid-size');
+    $grid-gutter: map-get($props, 'grid-gutter');
+    $grid-columns: map-get($props, 'grid-columns');
 
     /**
      * Computation:
@@ -69,8 +67,8 @@
     );
 
     /**
-    * Return CSS equation:
-    */
+     * Return CSS equation:
+     */
     @return $value;
   }
 
