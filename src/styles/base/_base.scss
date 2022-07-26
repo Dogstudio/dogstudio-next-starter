@@ -1,5 +1,8 @@
 @use 'sass:map';
 
+// Breakpoints List
+@use '../utils/breakpoints' as *;
+
 // Set up a decent box model on the root element
 // -----------------------------------------------------------------------------
 html {
@@ -54,7 +57,7 @@ body {
 
 // Create CSS variables and add global styles based on grid configuration
 // -----------------------------------------------------------------------------
-@each $use, $value in $mq-breakpoints {
+@each $use, $value in $breakpoints {
   @if map.has-key($config, $use) {
     /**
      * Configuration:

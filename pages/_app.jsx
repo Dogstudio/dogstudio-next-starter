@@ -22,7 +22,12 @@ const CustomApp = ({ Component, pageProps }) => {
   /**
    * Router:
    */
-  const { locale } = useRouter()
+  const { query, locale } = useRouter()
+
+  /**
+   * Variables:
+   */
+  const debug = process.env.NODE_ENV === 'development' && query.debug === 'grid'
 
   /**
    * DOM:
@@ -38,9 +43,11 @@ const CustomApp = ({ Component, pageProps }) => {
           />
         </Head>
 
+        {/** Page Component */}
         <Component {...pageProps} />
 
-        <Grid />
+        {/** Grid Debugger */}
+        {debug && <Grid />}
       </main>
     </>
   )

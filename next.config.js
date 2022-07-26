@@ -17,34 +17,16 @@ const config = {
     defaultLocale: DEFAULT,
   },
 
-  // Webpack 5
-  // See: https://nextjs.org/docs/messages/webpack5
-  webpack5: true,
-
   // Images Options
   images: {
+    deviceSizes: [320, 450, 600, 768, 1024, 1340, 1440, 1920],
     disableStaticImages: true,
-    deviceSizes: [320, 450, 600, 768, 1024, 1360, 1440],
   },
 
   // SASS Options
-  sassLoaderOptions: {
+  sassOptions: {
     includePaths: [path.join(__dirname), path.join(__dirname, 'src')],
   },
-
-  // Images Options
-  fileExtensions: [
-    'jpg',
-    'png',
-    'svg',
-    'gif',
-    'ico',
-    'jp2',
-    'avif',
-    'webp',
-    'jpeg',
-  ],
-  inlineImageLimit: false,
 
   // Extend Webpack Configuration
   webpack(_config, { webpack }) {

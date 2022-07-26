@@ -40,9 +40,3 @@ $config: (
     grid-columns: 16,
   ),
 );
-
-// Responsive Settings
-// -----------------------------------------------------------------------------
-$mq-responsive: true;
-$mq-static-breakpoint: xl;
-$mq-show-breakpoints: (xxxs, xxs, xs, s, m, l, xl, xxl, xxxl);
