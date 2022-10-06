@@ -1,6 +1,7 @@
 # Next.js
 /.next
 /out
+next.config.js
 
 # Build
 /dist
@@ -23,3 +24,7 @@ src/vendors/**/*.ts
 src/vendors/**/*.js
 src/vendors/**/*.tsx
 src/vendors/**/*.jsx
+
+# Utilities
+src/utils/helpers/**/*.ts
+src/utils/helpers/**/*.js
