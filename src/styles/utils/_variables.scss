@@ -13,6 +13,13 @@ $PI: 3.1415926536;
 $brand-black: #000;
 $brand-white: #fff;
 
+$brand-palette: (
+  'grey': (
+    'tone-1': #fdfdfd,
+    'tone-2': #8e8484,
+  ),
+);
+
 // Indexes
 // -----------------------------------------------------------------------------
 $z-layers: (
@@ -29,8 +36,24 @@ $base-line-height: 2;
 $fallback-font-serif: 'Times New Roman', 'Georgia', serif;
 $fallback-font-sans-serif: 'Helvetica', 'Arial', sans-serif;
 
-$font-serif: $fallback-font-serif;
-$font-sans-serif: $fallback-font-sans-serif;
+$brand-fonts: (
+  'serif': (
+    en: (
+      $fallback-font-serif,
+    ),
+    ar: (
+      $fallback-font-serif,
+    ),
+  ),
+  'sans-serif': (
+    en: (
+      $fallback-font-sans-serif,
+    ),
+    ar: (
+      $fallback-font-sans-serif,
+    ),
+  ),
+);
 
 // Grid System Settings
 // -----------------------------------------------------------------------------
