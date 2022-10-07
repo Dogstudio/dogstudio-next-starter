@@ -7,7 +7,7 @@ import Head from 'next/head'
 const Home = () => (
   <article className="home">
     <Head>
-      <title>Home | Dogstudio</title>
+      <title>Dogstudio | Next Starter</title>
     </Head>
 
     <h1>Hello World!</h1>

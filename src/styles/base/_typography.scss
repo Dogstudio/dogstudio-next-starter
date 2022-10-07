@@ -10,7 +10,7 @@ html {
 // Default text styles
 // -----------------------------------------------------------------------------
 body {
-  font-family: $font-sans-serif;
+  font-family: $fallback-font-sans-serif;
   font-size: 1rem;
   line-height: $base-line-height;
 }

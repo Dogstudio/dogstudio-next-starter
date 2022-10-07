@@ -13,6 +13,7 @@ $PI: 3.1415926536;
 $brand-black: #000;
 $brand-white: #fff;
 
+/// @require Kennel - kennel/functions/_color.scss
 $brand-palette: (
   'grey': (
     'tone-1': #fdfdfd,
@@ -36,6 +37,7 @@ $base-line-height: 2;
 $fallback-font-serif: 'Times New Roman', 'Georgia', serif;
 $fallback-font-sans-serif: 'Helvetica', 'Arial', sans-serif;
 
+/// @require Kennel - kennel/functions/_font.scss
 $brand-fonts: (
   'serif': (
     en: (
