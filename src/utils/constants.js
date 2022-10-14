@@ -7,6 +7,7 @@ export const IS_SERVER = typeof window === 'undefined'
 export const IS_BROWSER = typeof window !== 'undefined'
 
 // Environment Constants
+export const DEV = process.env.NODE_ENV === 'development'
 export const PROD = process.env.NODE_ENV !== 'development'
 export const MODE = process.env.NEXT_PUBLIC_APP_MODE || 'app'
 export const PREVIEW = process.env.NEXT_PUBLIC_APP_PREVIEW === 'true'

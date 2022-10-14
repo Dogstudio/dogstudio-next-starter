@@ -13,6 +13,9 @@ import Grid from 'components/partials/Grid'
 // Utils
 import { getLocaleDirection } from 'utils/helpers/language'
 
+// Constants
+import { DEV } from 'utils/constants'
+
 // Global Styles
 import 'styles/grid'
 import 'styles/global'
@@ -27,7 +30,7 @@ const CustomApp = ({ Component, pageProps }) => {
   /**
    * Variables:
    */
-  const debug = process.env.NODE_ENV === 'development' && query.debug === 'grid'
+  const debug = DEV && query.debug === 'grid'
 
   /**
    * DOM:

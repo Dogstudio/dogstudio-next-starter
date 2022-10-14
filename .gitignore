@@ -28,9 +28,6 @@ yarn-error.log*
 .env.production
 .env.development
 
-# Bark
-bark.yml
-
 # IDEs
 /.idea
 /.vscode
