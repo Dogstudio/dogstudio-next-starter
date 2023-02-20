@@ -5,12 +5,12 @@
 /coverage
 
 # Next.js
-/.next
-/out
+**/.next
+**/out
 
 # Build
-/dist
-/build
+**/dist
+**/build
 
 # Misc
 .DS_Store
