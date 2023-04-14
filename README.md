@@ -1,6 +1,6 @@
 ## Dogstudio Next Starter
 
-The Next.js starter with all the features you'll need to build blazing-fast websites and applications.
+The repository has all the features needed to build blazing-fast experience.
 
 - Next 12
 - Prettier
@@ -57,9 +57,22 @@ npm run lint
 npm run upgrade
 ```
 
+## Example
+
+An example is available on the `demo` branch to test all the features included in the repository:  
+
+```bash
+git checkout demo
+```
+
+```bash
+npm i
+npm run dev
+```
+
 ## Contributing
 
-Please submit issues, pull requests or [contact us](devops@dogstudio.be). We are open to all kind of contributions.
+Please submit issues, pull requests or [contact us](devops+next-starter@dogstudio.be). We are open to all kind of contributions.
 
 ## License
 
