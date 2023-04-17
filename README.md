@@ -2,7 +2,7 @@
 
 The repository has all the features needed to build blazing-fast experience.
 
-- Next 12
+- Next 13
 - Prettier
 - SCSS/SASS
 
